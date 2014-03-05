@@ -12,6 +12,7 @@
 #import "FmcLeftMenuViewController.h"
 #import "FmcSYViewController.h"
 #import "BaiduMobStat.h"
+#import "APService.h"
 
 @implementation FmcAppDelegate
 @synthesize window = _window;
@@ -37,13 +38,29 @@
     statTracker.shortAppVersion  = IosAppVersion; //参数为NSString * 类型,自定义app版本信息，如果不设置，默认从CFBundleVersion里取
     statTracker.enableDebugOn = YES; //打开sdk调试接口，会有log打印
     [statTracker startWithAppId:@"c03e7531bf"];//设置您在mtj网站上添加的app的appkey
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor grayColor];
     [self.window makeKeyAndVisible];
     FmcLoginViewController* loginView = [[FmcLoginViewController alloc] init];
     self.window.rootViewController = loginView;
+    // Required
+    [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                   UIRemoteNotificationTypeSound |
+                                                   UIRemoteNotificationTypeAlert)];
+    // Required
+    [APService setupWithOption:launchOptions];
     return YES;
+    
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES; 
 }
 
 -(void) applicationDidReceiveMemoryWarning:(UIApplication *)application{
@@ -52,6 +69,18 @@
 //禁止横屏
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     return UIInterfaceOrientationMaskPortrait;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    // Required
+    [APService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required
+    [APService handleRemoteNotification:userInfo];
 }
 
 @end

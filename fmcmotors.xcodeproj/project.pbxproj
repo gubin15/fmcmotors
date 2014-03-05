@@ -21,7 +21,6 @@
 		1104065E18C4AA2B00CF68D0 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1104063018C4AA2B00CF68D0 /* GTMBase64.m */; };
 		1104065F18C4AA2B00CF68D0 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1104063318C4AA2B00CF68D0 /* JASidePanelController.m */; };
 		1104066018C4AA2B00CF68D0 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1104063518C4AA2B00CF68D0 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1104066118C4AA2B00CF68D0 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1104063618C4AA2B00CF68D0 /* libBaiduMobStat.a */; };
 		1104066218C4AA2B00CF68D0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1104063818C4AA2B00CF68D0 /* MBProgressHUD.m */; };
 		1104066318C4AA2B00CF68D0 /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 1104063A18C4AA2B00CF68D0 /* NSDate+convenience.m */; };
 		1104066418C4AA2B00CF68D0 /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 1104063C18C4AA2B00CF68D0 /* NSMutableArray+convenience.m */; };
@@ -61,6 +60,9 @@
 		110406B118C4BF4300CF68D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110406B018C4BF4300CF68D0 /* CoreLocation.framework */; };
 		110406B318C4BF6600CF68D0 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 110406B218C4BF6600CF68D0 /* libstdc++.dylib */; };
 		110406B518C4BF7200CF68D0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110406B418C4BF7200CF68D0 /* CoreTelephony.framework */; };
+		11AB1C7E18C5B81700E178D1 /* libPushSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AB1C7D18C5B81700E178D1 /* libPushSDK.a */; };
+		11AB1C8018C5B87200E178D1 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AB1C7F18C5B87200E178D1 /* PushConfig.plist */; };
+		11D4E19B18C603F300E5C585 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D4E19A18C603F300E5C585 /* libBaiduMobStat.a */; };
 		11FDE5D418C47FA200CB08DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FDE5D318C47FA200CB08DA /* Foundation.framework */; };
 		11FDE5D618C47FA200CB08DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FDE5D518C47FA200CB08DA /* CoreGraphics.framework */; };
 		11FDE5D818C47FA200CB08DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FDE5D718C47FA200CB08DA /* UIKit.framework */; };
@@ -119,7 +121,6 @@
 		1104063318C4AA2B00CF68D0 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		1104063418C4AA2B00CF68D0 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		1104063518C4AA2B00CF68D0 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		1104063618C4AA2B00CF68D0 /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
 		1104063718C4AA2B00CF68D0 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		1104063818C4AA2B00CF68D0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1104063918C4AA2B00CF68D0 /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
@@ -157,7 +158,6 @@
 		1104065D18C4AA2B00CF68D0 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
 		1104067318C4AA4900CF68D0 /* AJGlobalUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJGlobalUICommon.h; sourceTree = "<group>"; };
 		1104067418C4AA4900CF68D0 /* AJGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJGlobalUICommon.m; sourceTree = "<group>"; };
-		1104067618C4AA6900CF68D0 /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
 		1104067718C4AA9700CF68D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1104067918C4AAAC00CF68D0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1104067B18C4AAB900CF68D0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -191,6 +191,11 @@
 		110406B018C4BF4300CF68D0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		110406B218C4BF6600CF68D0 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		110406B418C4BF7200CF68D0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		11AB1C7C18C5B81700E178D1 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
+		11AB1C7D18C5B81700E178D1 /* libPushSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPushSDK.a; sourceTree = "<group>"; };
+		11AB1C7F18C5B87200E178D1 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		11D4E19718C5FF7D00E5C585 /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
+		11D4E19A18C603F300E5C585 /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
 		11FDE5D018C47FA200CB08DA /* fmcmotors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fmcmotors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FDE5D318C47FA200CB08DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		11FDE5D518C47FA200CB08DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -220,12 +225,13 @@
 				110406AF18C4BF3600CF68D0 /* Security.framework in Frameworks */,
 				110406AD18C4BF2100CF68D0 /* AdSupport.framework in Frameworks */,
 				1104067E18C4AAC600CF68D0 /* libz.1.2.5.dylib in Frameworks */,
+				11D4E19B18C603F300E5C585 /* libBaiduMobStat.a in Frameworks */,
 				1104067C18C4AABA00CF68D0 /* CFNetwork.framework in Frameworks */,
 				1104067A18C4AAAC00CF68D0 /* MobileCoreServices.framework in Frameworks */,
 				1104067818C4AA9700CF68D0 /* SystemConfiguration.framework in Frameworks */,
 				11FDE5D618C47FA200CB08DA /* CoreGraphics.framework in Frameworks */,
 				11FDE5D818C47FA200CB08DA /* UIKit.framework in Frameworks */,
-				1104066118C4AA2B00CF68D0 /* libBaiduMobStat.a in Frameworks */,
+				11AB1C7E18C5B81700E178D1 /* libPushSDK.a in Frameworks */,
 				11FDE5D418C47FA200CB08DA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +270,9 @@
 		1104060E18C4A9CB00CF68D0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				1104067618C4AA6900CF68D0 /* BaiduMobStat.h */,
+				11D4E19A18C603F300E5C585 /* libBaiduMobStat.a */,
+				11D4E19718C5FF7D00E5C585 /* BaiduMobStat.h */,
+				11AB1C7B18C5B81700E178D1 /* lib */,
 				1104067318C4AA4900CF68D0 /* AJGlobalUICommon.h */,
 				1104067418C4AA4900CF68D0 /* AJGlobalUICommon.m */,
 				1104062F18C4AA2B00CF68D0 /* GTMBase64.h */,
@@ -274,7 +282,6 @@
 				1104063318C4AA2B00CF68D0 /* JASidePanelController.m */,
 				1104063418C4AA2B00CF68D0 /* JSONKit.h */,
 				1104063518C4AA2B00CF68D0 /* JSONKit.m */,
-				1104063618C4AA2B00CF68D0 /* libBaiduMobStat.a */,
 				1104063718C4AA2B00CF68D0 /* MBProgressHUD.h */,
 				1104063818C4AA2B00CF68D0 /* MBProgressHUD.m */,
 				1104063918C4AA2B00CF68D0 /* NSDate+convenience.h */,
@@ -463,6 +470,15 @@
 			name = YXTW;
 			sourceTree = "<group>";
 		};
+		11AB1C7B18C5B81700E178D1 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				11AB1C7C18C5B81700E178D1 /* APService.h */,
+				11AB1C7D18C5B81700E178D1 /* libPushSDK.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		11FDE5C718C47FA200CB08DA = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +544,7 @@
 		11FDE5DA18C47FA200CB08DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11AB1C7F18C5B87200E178D1 /* PushConfig.plist */,
 				11FDE5DB18C47FA200CB08DA /* fmcmotors-Info.plist */,
 				11FDE5DC18C47FA200CB08DA /* InfoPlist.strings */,
 				11FDE5DF18C47FA200CB08DA /* main.m */,
@@ -634,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FDE5DE18C47FA200CB08DA /* InfoPlist.strings in Resources */,
+				11AB1C8018C5B87200E178D1 /* PushConfig.plist in Resources */,
 				11FDE5E618C47FA200CB08DA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -815,17 +833,23 @@
 		11FDE5FD18C47FA200CB08DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Bin Gu (4EMS974PE2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fmcmotors/fmcmotors-Prefix.pch";
 				INFOPLIST_FILE = "fmcmotors/fmcmotors-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/ios/workspace/fmcmotors/fmcmotors,
+					/ios/workspace/fmcmotors/fmcmotors/lib,
 				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "61661827-62ED-42AF-A744-5FDF54CB0C09";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -833,17 +857,22 @@
 		11FDE5FE18C47FA200CB08DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Bin Gu (4EMS974PE2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fmcmotors/fmcmotors-Prefix.pch";
 				INFOPLIST_FILE = "fmcmotors/fmcmotors-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/ios/workspace/fmcmotors/fmcmotors,
+					/ios/workspace/fmcmotors/fmcmotors/lib,
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "61661827-62ED-42AF-A744-5FDF54CB0C09";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -30,7 +30,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -85,8 +84,8 @@
     passwordField.textAlignment = NSTextAlignmentCenter;
     
     //-------------
-    //    usernameField.text = @"0930059";
-    //    passwordField.text = @"babysmj";
+    //    usernameField.text = @"0930062";
+    //    passwordField.text = @"gubin1982";
     
     [self.view addSubview:passwordField];
     
