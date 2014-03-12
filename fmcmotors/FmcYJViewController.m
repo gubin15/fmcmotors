@@ -103,6 +103,9 @@
         
         NSURL* insertOpinionUrl = [NSURL URLWithString:@"http://210.5.29.85/sh/sum/mobile/upload_opinion.php"];
         ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:insertOpinionUrl];
+        FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+        [request setDownloadCache:fmcApp.fmcCache];
+        [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
         [request setPostValue:idStr forKey:@"opinion_id"];
         [request setPostValue:usernameStr forKey:@"opinion_username"];
         [request setPostValue:realnameStr forKey:@"opinion_realname"];

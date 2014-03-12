@@ -15,6 +15,7 @@
 
 @implementation FmcCLOUDViewController
 @synthesize webView;
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +32,9 @@
 	UIView* cloudView = [[UIView alloc] init];
     cloudView.backgroundColor = [UIColor whiteColor];
     self.view = cloudView;
+    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    scrollView.contentSize = CGSizeMake(ScreenWidth,1500);
+    [self.view addSubview:scrollView];
     webView = [[UIWebView alloc] init];
     webView.scalesPageToFit = YES;
     webView.delegate = self;
@@ -40,7 +44,7 @@
     [webView loadRequest:[NSURLRequest requestWithURL:bdUrl]];
     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.leftBarButtonItem = temporaryBarButtonItem;
-    [self.view addSubview:webView];
+    [scrollView addSubview:webView];
     
     HUD = [[MBProgressHUD alloc] initWithView:self.view];
     HUD.mode = MBProgressHUDModeCustomView;

@@ -13,10 +13,14 @@
 #import "FmcSYViewController.h"
 #import "BaiduMobStat.h"
 #import "APService.h"
+#import "ASIDownloadCache.h"
 
 @implementation FmcAppDelegate
+
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize fmcCache;
+@synthesize bdCount;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -49,6 +53,14 @@
                                                    UIRemoteNotificationTypeAlert)];
     // Required
     [APService setupWithOption:launchOptions];
+    
+    ASIDownloadCache* cache = [[ASIDownloadCache alloc] init];
+    self.fmcCache = cache;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    [self.fmcCache setStoragePath:[documentDirectory stringByAppendingPathComponent:@"resource"]];
+    [self.fmcCache setDefaultCachePolicy:ASIOnlyLoadIfNotCachedCachePolicy];
+    
     return YES;
     
 }

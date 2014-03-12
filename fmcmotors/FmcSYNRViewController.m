@@ -12,6 +12,7 @@
 #import "JSONKit.h"
 #import "BaiduMobStat.h"
 
+
 @interface FmcSYNRViewController ()
 
 @end
@@ -111,6 +112,9 @@
     
     NSURL* getNoticeUrl = [NSURL URLWithString:@"http://www.fmcmotors.com.cn/ios/getNoticeUrl.php"];
     ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL:getNoticeUrl];
+    FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+    [request setDownloadCache:fmcApp.fmcCache];
+    [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
     [request setPostValue:activesn forKey:@"activesn"];
     [request setDelegate:self];
     [request startAsynchronous];
@@ -159,6 +163,9 @@
             progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0.0f, 480.0f+m*40.0f, ScreenWidth-20, 20.0f)];
             [progressView setProgressViewStyle:UIProgressViewStyleDefault];
             ASIHTTPRequest* downloadRequest = [ASIHTTPRequest requestWithURL:downloadUrl];
+            FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+            [downloadRequest setDownloadCache:fmcApp.fmcCache];
+            [downloadRequest setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
             [downloadRequest setDownloadProgressDelegate:progressView];
             [downloadRequest setDownloadDestinationPath:savePath];
             [scrollView addSubview:progressView];

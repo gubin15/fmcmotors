@@ -15,5 +15,6 @@
 @property(nonatomic, strong) UIWebView* webView;
 @property(nonatomic, strong) NSDictionary* user;
 @property(nonatomic, strong) NSArray* bpmUsers;
+@property(nonatomic, strong) UIScrollView* scrollView;
 
 @end

@@ -60,6 +60,9 @@
     //网络异步请求数据
     NSURL* getSearchCalendarUrl = [NSURL URLWithString:@"http://www.fmcmotors.com.cn/ios/getSearchCalendar.php"];
     ASIFormDataRequest* request = [[ASIFormDataRequest alloc] initWithURL:getSearchCalendarUrl];
+    FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+    [request setDownloadCache:fmcApp.fmcCache];
+    [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
     [request setPostValue:datey forKey:@"sdatey"];
     [request setPostValue:datem forKey:@"sdatem"];
     [request setPostValue:dated forKey:@"sdated"];

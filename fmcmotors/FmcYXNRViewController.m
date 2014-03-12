@@ -53,6 +53,9 @@
                                                        encoding:NSUTF8StringEncoding];
     NSURL* getMailUrl = [NSURL URLWithString:@"http://mail.30888.com.cn/android/getMail2.php"];
     ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL:getMailUrl];
+    FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+    [request setDownloadCache:fmcApp.fmcCache];
+    [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
     [request setPostValue:username forKey:@"username"];
     [request setPostValue:mail_file_name forKey:@"mail_file_name"];
     [request setPostValue:mail_file_folder forKey:@"mail_file_folder"];

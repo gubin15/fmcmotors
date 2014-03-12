@@ -84,8 +84,8 @@
     passwordField.textAlignment = NSTextAlignmentCenter;
     
     //-------------
-    //    usernameField.text = @"0930062";
-    //    passwordField.text = @"gubin1982";
+//    usernameField.text = @"10175";
+//    passwordField.text = @"54321";
     
     [self.view addSubview:passwordField];
     
@@ -172,10 +172,10 @@
     HUD.hidden = YES;
     NSString* responseString = [request responseString];
     users = [responseString objectFromJSONString];
-    NSDictionary* user = [users objectAtIndex:0];
-    NSString* usernameStr = [user objectForKey:@"Cal_User_Username"];
-    NSString* passwordStr = [user objectForKey:@"Cal_User_Password"];
-    NSString* realnameStr = [user objectForKey:@"Cal_User_FirstName"];
+    NSDictionary* sqlUser = [users objectAtIndex:0];
+    NSString* usernameStr = [sqlUser objectForKey:@"Cal_User_Username"];
+    NSString* passwordStr = [sqlUser objectForKey:@"Cal_User_Password"];
+    NSString* realnameStr = [sqlUser objectForKey:@"Cal_User_FirstName"];
     
     if ([usernameStr isEqualToString:usernameField.text]) {
         
@@ -196,7 +196,16 @@
         mainView.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[FmcSYViewController alloc] init]];
         
         [self presentViewController:mainView  animated:YES completion:^{
-            NSLog(@"OK");
+            NSURL* getBDcountUrl = [NSURL URLWithString:@"http://www.fmcmotors.com.cn/ios/getBDcount.php"];
+            ASIFormDataRequest* bdCountRequest = [ASIFormDataRequest requestWithURL:getBDcountUrl];
+            FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+            [bdCountRequest setDownloadCache:fmcApp.fmcCache];
+            [bdCountRequest setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
+            [bdCountRequest setPostValue:usernameField.text forKey:@"logonid"];
+            [bdCountRequest setDidFinishSelector:@selector(requestSuccess:)];
+            [bdCountRequest setDidFailSelector:@selector(requestError:)];
+            [bdCountRequest setDelegate:self];
+            [bdCountRequest startAsynchronous];
         }];
         
     }else{
@@ -217,6 +226,21 @@
                                                    otherButtonTitles:nil];
     [loginErrorAlert show];
 }
+
+-(void)requestSuccess:(ASIHTTPRequest *)bdCountRequest{
+    NSString* responseString = [bdCountRequest responseString];
+    NSArray* counts = [responseString objectFromJSONString];
+    NSDictionary* bdCount = [counts objectAtIndex:0];
+    NSString* count = [bdCount objectForKey:@"NOTES_COUNT"];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[count intValue]];
+    FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+    fmcApp.bdCount = [count intValue];
+}
+
+-(void)requestError:(ASIHTTPRequest *)bdCountRequest{
+   
+}
+
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {

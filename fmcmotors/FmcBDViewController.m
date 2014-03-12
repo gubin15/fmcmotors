@@ -21,6 +21,7 @@
 @synthesize webView;
 @synthesize user;
 @synthesize bpmUsers;
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +37,9 @@
 	UIView* bdView = [[UIView alloc] init];
     bdView.backgroundColor = [UIColor whiteColor];
     self.view = bdView;
+    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    scrollView.contentSize = CGSizeMake(ScreenWidth,1500);
+    [self.view addSubview:scrollView];
     NSString* username = [user objectForKey:@"username"];
     NSURL* getBmpUserUrl = [NSURL URLWithString:@"http://www.fmcmotors.com.cn/ios/getBpmUser.php"];
     ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL:getBmpUserUrl];
@@ -74,7 +78,7 @@
     NSString* loadUrlStr = [[NSString alloc] initWithFormat:@"http://www.fmcmotors.com.cn/bpmflow/SignOn.aspx?id=%@&pwd=%@&url=http://www.fmcmotors.com.cn/bpmflow/content/flow_Mobile.aspx",logonidStr,passwordStr];
     NSURL* bdUrl = [NSURL URLWithString:loadUrlStr];
     [webView loadRequest:[NSURLRequest requestWithURL:bdUrl]];
-    [self.view addSubview:webView];
+    [scrollView addSubview:webView];
     
 }
 

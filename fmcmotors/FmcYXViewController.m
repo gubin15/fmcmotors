@@ -53,6 +53,9 @@
     NSString* username = [user objectForKey:@"username"];
     NSURL* getListMailUrl = [NSURL URLWithString:@"http://mail.30888.com.cn/android/getMailList2.php"];
     ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL:getListMailUrl];
+    FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+    [request setDownloadCache:fmcApp.fmcCache];
+    [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
     [request setPostValue:username forKey:@"username"];
     [request setDelegate:self];
     [request startAsynchronous];

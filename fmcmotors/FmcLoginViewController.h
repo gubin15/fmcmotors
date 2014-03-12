@@ -15,5 +15,4 @@
 @property(nonatomic, strong) UITextField* usernameField;
 @property(nonatomic, strong) UITextField* passwordField;
 @property(nonatomic, strong) NSArray* users;
-
 @end

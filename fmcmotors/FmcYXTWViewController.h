@@ -13,5 +13,6 @@
     MBProgressHUD* HUD;
 }
 @property(nonatomic, strong) UIWebView* webView;
+@property(nonatomic, strong) UIScrollView* scrollView;
 
 @end

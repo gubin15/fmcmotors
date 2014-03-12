@@ -49,6 +49,9 @@
     [messageRequest setRequestMethod:@"POST"];
     [messageRequest setDidFinishSelector:@selector(requestSuccess:)];
     [messageRequest setDidFailSelector:@selector(requestError:)];
+    FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+    [messageRequest setDownloadCache:fmcApp.fmcCache];
+    [messageRequest setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
     [messageRequest setDelegate:self];
     [messageRequest startAsynchronous];
     
@@ -122,6 +125,9 @@
 	notices = [[NSArray alloc] init];
     NSURL* getNoticeUrl = [NSURL URLWithString:@"http://www.fmcmotors.com.cn/ios/getNotice.php"];
     ASIFormDataRequest* request = [ASIFormDataRequest requestWithURL:getNoticeUrl];
+    FmcAppDelegate* fmcApp = [[UIApplication sharedApplication] delegate];
+    [request setDownloadCache:fmcApp.fmcCache];
+    [request setCacheStoragePolicy:ASICachePermanentlyCacheStoragePolicy];
     [request setDelegate:self];
     [request startAsynchronous];
     

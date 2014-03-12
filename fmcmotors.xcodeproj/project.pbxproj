@@ -60,9 +60,11 @@
 		110406B118C4BF4300CF68D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110406B018C4BF4300CF68D0 /* CoreLocation.framework */; };
 		110406B318C4BF6600CF68D0 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 110406B218C4BF6600CF68D0 /* libstdc++.dylib */; };
 		110406B518C4BF7200CF68D0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110406B418C4BF7200CF68D0 /* CoreTelephony.framework */; };
+		115E65B018CF050400939473 /* BadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 115E65AD18CF050400939473 /* BadgeLabel.m */; };
+		115E65B118CF050400939473 /* BadgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 115E65AF18CF050400939473 /* BadgeTableViewCell.m */; };
 		11AB1C7E18C5B81700E178D1 /* libPushSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AB1C7D18C5B81700E178D1 /* libPushSDK.a */; };
 		11AB1C8018C5B87200E178D1 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AB1C7F18C5B87200E178D1 /* PushConfig.plist */; };
-		11D4E19B18C603F300E5C585 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D4E19A18C603F300E5C585 /* libBaiduMobStat.a */; };
+		11EB830A18D031E900AEE433 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EB830918D031E900AEE433 /* libBaiduMobStat.a */; };
 		11FDE5D418C47FA200CB08DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FDE5D318C47FA200CB08DA /* Foundation.framework */; };
 		11FDE5D618C47FA200CB08DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FDE5D518C47FA200CB08DA /* CoreGraphics.framework */; };
 		11FDE5D818C47FA200CB08DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FDE5D718C47FA200CB08DA /* UIKit.framework */; };
@@ -191,11 +193,15 @@
 		110406B018C4BF4300CF68D0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		110406B218C4BF6600CF68D0 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		110406B418C4BF7200CF68D0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		115E65AC18CF050400939473 /* BadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeLabel.h; sourceTree = "<group>"; };
+		115E65AD18CF050400939473 /* BadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeLabel.m; sourceTree = "<group>"; };
+		115E65AE18CF050400939473 /* BadgeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeTableViewCell.h; sourceTree = "<group>"; };
+		115E65AF18CF050400939473 /* BadgeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeTableViewCell.m; sourceTree = "<group>"; };
 		11AB1C7C18C5B81700E178D1 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
 		11AB1C7D18C5B81700E178D1 /* libPushSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPushSDK.a; sourceTree = "<group>"; };
 		11AB1C7F18C5B87200E178D1 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
-		11D4E19718C5FF7D00E5C585 /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
-		11D4E19A18C603F300E5C585 /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
+		11EB830818D031E900AEE433 /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
+		11EB830918D031E900AEE433 /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
 		11FDE5D018C47FA200CB08DA /* fmcmotors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fmcmotors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FDE5D318C47FA200CB08DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		11FDE5D518C47FA200CB08DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -225,7 +231,7 @@
 				110406AF18C4BF3600CF68D0 /* Security.framework in Frameworks */,
 				110406AD18C4BF2100CF68D0 /* AdSupport.framework in Frameworks */,
 				1104067E18C4AAC600CF68D0 /* libz.1.2.5.dylib in Frameworks */,
-				11D4E19B18C603F300E5C585 /* libBaiduMobStat.a in Frameworks */,
+				11EB830A18D031E900AEE433 /* libBaiduMobStat.a in Frameworks */,
 				1104067C18C4AABA00CF68D0 /* CFNetwork.framework in Frameworks */,
 				1104067A18C4AAAC00CF68D0 /* MobileCoreServices.framework in Frameworks */,
 				1104067818C4AA9700CF68D0 /* SystemConfiguration.framework in Frameworks */,
@@ -270,8 +276,12 @@
 		1104060E18C4A9CB00CF68D0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				11D4E19A18C603F300E5C585 /* libBaiduMobStat.a */,
-				11D4E19718C5FF7D00E5C585 /* BaiduMobStat.h */,
+				11EB830818D031E900AEE433 /* BaiduMobStat.h */,
+				11EB830918D031E900AEE433 /* libBaiduMobStat.a */,
+				115E65AC18CF050400939473 /* BadgeLabel.h */,
+				115E65AD18CF050400939473 /* BadgeLabel.m */,
+				115E65AE18CF050400939473 /* BadgeTableViewCell.h */,
+				115E65AF18CF050400939473 /* BadgeTableViewCell.m */,
 				11AB1C7B18C5B81700E178D1 /* lib */,
 				1104067318C4AA4900CF68D0 /* AJGlobalUICommon.h */,
 				1104067418C4AA4900CF68D0 /* AJGlobalUICommon.m */,
@@ -692,6 +702,7 @@
 				1104066918C4AA2B00CF68D0 /* CJSONSerializedData.m in Sources */,
 				1104066318C4AA2B00CF68D0 /* NSDate+convenience.m in Sources */,
 				1104069518C4B32400CF68D0 /* FmcSYNRViewController.m in Sources */,
+				115E65B118CF050400939473 /* BadgeTableViewCell.m in Sources */,
 				110406A718C4BB3A00CF68D0 /* FmcYXNRViewController.m in Sources */,
 				1104068A18C4AE7400CF68D0 /* FmcCLOUDViewController.m in Sources */,
 				110406A418C4BB1D00CF68D0 /* FmcYXViewController.m in Sources */,
@@ -711,6 +722,7 @@
 				1104062D18C4A9F000CF68D0 /* ASINetworkQueue.m in Sources */,
 				1104062B18C4A9F000CF68D0 /* ASIHTTPRequest.m in Sources */,
 				1104067018C4AA2B00CF68D0 /* UIView+convenience.m in Sources */,
+				115E65B018CF050400939473 /* BadgeLabel.m in Sources */,
 				1104066618C4AA2B00CF68D0 /* CFilteringJSONSerializer.m in Sources */,
 				1104065F18C4AA2B00CF68D0 /* JASidePanelController.m in Sources */,
 				1104062918C4A9F000CF68D0 /* ASIDownloadCache.m in Sources */,
@@ -845,11 +857,13 @@
 					"$(inherited)",
 					/ios/workspace/fmcmotors/fmcmotors,
 					/ios/workspace/fmcmotors/fmcmotors/lib,
+					"$(PROJECT_DIR)/fmcmotors",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "61661827-62ED-42AF-A744-5FDF54CB0C09";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -869,10 +883,13 @@
 					"$(inherited)",
 					/ios/workspace/fmcmotors/fmcmotors,
 					/ios/workspace/fmcmotors/fmcmotors/lib,
+					"$(PROJECT_DIR)/fmcmotors",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "61661827-62ED-42AF-A744-5FDF54CB0C09";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
